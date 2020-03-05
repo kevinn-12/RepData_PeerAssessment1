@@ -25,7 +25,8 @@ head(step_by_day)
 2. If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
 ```{r, echo=TRUE}
 hist(step_by_day$steps, main = "Histogram of Daily Steps",
-     xlab = "Steps") + abline(v=mean(step_by_day$steps,na.rm = T),col="red")
+     xlab = "Steps")
+abline(v=mean(step_by_day$steps,na.rm = T),col="red")
 
 ```
 
@@ -36,8 +37,8 @@ median_steps <- median(step_by_day$steps, na.rm = T)
 median_steps
 mean_steps
 ```
-Median: `r median_steps`
-Mean: `r mean_steps`
+- Median: `r median_steps`
+- Mean: `r mean_steps`
 
 ## What is the average daily activity pattern?
 1. Make a time series plot (i.e. \color{red}{\verb|type = "l"|}type="l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
@@ -89,10 +90,11 @@ median_steps1
 mean_steps1
 
 ```
-Median: `r median_steps1`
-Mean: `r mean_steps1`
-Median Diff: `r median_steps-median_steps1`
-Mean Diff: `r mean_steps-mean_steps1`
+- Median: `r median_steps1`
+- Mean: `r mean_steps1`
+- Median Diff: `r median_steps-median_steps1`
+- Mean Diff: `r mean_steps-mean_steps1`
+
 The impact of imputing missing data is neglegible on the mean daily steps, but it does reduce the median daily steps.
 
 
